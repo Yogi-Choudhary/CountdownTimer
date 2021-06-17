@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<center>
+<p>
+  <h2>Eventname:</h2>
+  <h2> <%= @user.eventname %> </h2>
+</p>
+
+<p>
+  <h2>Date:</h2>
+  <h2> <%= @user.date %> </h2><br>
+  <h2> <%= (@user.date - Time.current(24 * 3600 / 3600)).strftime("%d:%H:%M:%S") %></h2>
+
+</p>
+</center>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
